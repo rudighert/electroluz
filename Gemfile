@@ -32,7 +32,7 @@ gem "jquery-rails", "2.0.2"
 gem 'jquery-ui-rails'
 
 # haml gems
-gem 'haml'
+gem 'haml', '~> 3.1.7'
 
 gem 'compass-rails'
 
