@@ -1,7 +1,10 @@
 @import 'compass';
-@import "compass/layout/sticky-footer";
 
-
+a{text-decoration:    none}
+h1,h2,h3,h4,h5,h6{
+  margin:             0;
+  padding:            0;
+}
 body{
   width:              100%;
   min-width:          1000px;
@@ -18,7 +21,7 @@ body{
   height:             100%;
   position:           fixed;
   top:                0;
-  left:               0;
+  right:              0;
   background:         asset-url('bg/black_arrow.png',image) no-repeat right center;
   z-index:            0;
   background-size:    cover;
@@ -46,11 +49,11 @@ body{
   text-align:         right;
   width:              100%;
   position:           fixed;
-  background-color:   black;
   top:                0;
   left:               0;
   border-bottom:      1px solid yellow;
   z-index:            3;
+  @include background(linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%));
   .content_header{
     width:              960px;
     margin:             0 auto;
@@ -67,4 +70,9 @@ body{
   width:                960px;
   padding:              25px 0;
   font-weight:          lighter;
+}
+.vertical_align{
+  height:               100%;
+  margin-left:          -2px;
+  @include inline-block;
 }

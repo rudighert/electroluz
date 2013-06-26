@@ -27,7 +27,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# jquery
+gem "jquery-rails", "2.0.2"
+gem 'jquery-ui-rails'
 
 # haml gems
 gem 'haml'
