@@ -1,0 +1,36 @@
+@import "compass";
+.banner_inti{
+  margin:             0 auto;
+  width:              920px;
+  height:             300px;
+  overflow-y:         hidden; 
+}
+.area_banner{
+  margin:             0;
+  padding:            0;
+  .content_banner{
+    width:            920px;
+    height:           300px;
+    @include inline-block;
+  }
+  .fade_text{
+    color:            white;
+    background-color: rgba(black, 0.7);
+    padding:          10px;
+    margin-left:      20px;
+    text-align:       left;
+    @include inline-block;
+    @include text-shadow(1px 1px 1px black);
+    @include border-radius(5px);
+    .title{
+      font-weight:      bold;
+      font-size:        25px;
+      margin-bottom:    10px;
+    }
+    .area_text{
+      font-weight:      ligther;
+      font-size:        14px;
+      max-width:        350px;
+    }
+  }
+}

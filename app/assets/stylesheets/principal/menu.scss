@@ -1,0 +1,33 @@
+@import 'compass';
+.menu{
+  margin:             0;
+  padding:            20px 0;
+  text-align:         center;
+
+}
+
+.item{
+    font-size:          14px;
+    font-weight:        light;
+    color:              black;
+    min-width:          130px;
+    text-align:         center;
+    border-right:        1px solid gray;
+    @include box-sizing(border-box);
+    @include inline-block;
+
+    &:nth-last{
+      border:           none;
+    }
+
+    a{
+      color:            black;
+      &.active{
+        text-decoration:  underline;
+        font-weight:      bold;
+      }
+      &:hover{
+        text-decoration:  underline;
+      }
+    }
+  }
