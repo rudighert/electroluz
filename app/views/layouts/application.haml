@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 %html
   %head
-    %title Electroluz - Servicios Eléctriocos Integrales 
+    %title Exoluz - Servicios Eléctriocos Integrales 
     / Stylesheets
     =stylesheet_link_tag    "application", :media => "all"
     -if content_for? :stylesheets
@@ -14,11 +14,10 @@
 
     #header
       =render partial: 'layouts/header'
-    #wrapper
-      .content_wrapper
-        =yield
+    .content_page
+      =render 'menu'
+      #wrapper
+        .content_wrapper
+          =yield
     #footer
-      %ul
-        %li
-          Contacto
-
+      =render 'layouts/footer'

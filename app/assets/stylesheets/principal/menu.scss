@@ -1,9 +1,19 @@
 @import 'compass';
+.conten_menu{
+  width:            100%;
+  position:         fixed;
+  top:              65px;
+  left:             0;
+  border-bottom:    1px solid rgb(202, 202, 202);
+  z-index:            10;
+}
 .menu{
   margin:             0;
   padding:            20px 0;
   text-align:         center;
-
+  margin:             0 auto;
+  width:              960px;
+  background:         white;
 }
 
 .item{
@@ -16,8 +26,9 @@
     @include box-sizing(border-box);
     @include inline-block;
 
-    &:nth-last{
+    &:last-child{
       border:           none;
+
     }
 
     a{

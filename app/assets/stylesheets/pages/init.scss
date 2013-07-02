@@ -11,6 +11,7 @@
   .content_banner{
     width:            920px;
     height:           300px;
+    @include border-radius(5px);
     @include inline-block;
   }
   .fade_text{

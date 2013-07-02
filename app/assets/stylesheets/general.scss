@@ -1,4 +1,6 @@
 @import 'compass';
+@import "compass/layout/sticky-footer";
+@include sticky-footer(54px, ".content_page", "#wrapper", "#root");
 
 a{text-decoration:    none}
 h1,h2,h3,h4,h5,h6{
@@ -9,7 +11,7 @@ body{
   width:              100%;
   min-width:          1000px;
   height:             100%;
-  background-color:   white;
+  background-color:   rgb(202, 202, 202);
   margin:             0;
   padding:            0;
   font-family:        "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -20,20 +22,27 @@ body{
   position:           relative;
   z-index:            1;
   left:               0;
-  margin:             60px auto 0 auto;
+  margin:             123px auto 0 auto;
   
   .content_wrapper{
     width:              960px;
     min-height:         400px;
     margin:             50px auto 0 auto;
-    background-color :  rgba(white,0.9);
-    @include border-radius(4px);
   }
+}
+
+.content_page{
+  background-color:     white;
+  padding-top:          25px;
+  width:                960px;
+  margin:               0 auto;
+  @include border-radius(5px);
+  @include box-shadow(1px 0px 2px rgb(151, 151, 151));
 }
 
 #header{
   color:              white;
-  font-size:          5px;
+  font-size:          0;
   font-weight:        bold;
   text-align:         right;
   width:              100%;
@@ -41,26 +50,40 @@ body{
   top:                0;
   left:               0;
   z-index:            3;
-  background:   asset-url('gray.png',image);
+  min-width:          960px;
+ 
   @include box-shadow(1px 1px 3px gray);
-  .content_header{
-    width:              960px;
-    margin:             0 auto;
-    padding:            0;
+  .header_side{
+    @include inline-block;
+    &.left{
+      width:          70%;
+      height:         65px;
+      background:   asset-url('gray.png',image);
+    }
+    &.right{
+      width:          30%;
+      text-align:     left;
+      background:   asset-url('black.png',image);
+    }
   }
-
-
 }
 
 #footer{
-  color:                yellow;
+  color:                white;
   font-size:            15px;
   position:             relative;
   z-index:              3;
   margin:               0 auto;
-  width:                960px;
+  width:                100%;
   padding:              25px 0;
   font-weight:          lighter;
+  background:   asset-url('gray.png',image);
+  margin-top:           25px;
+  .conten_footer{
+    width:              960px;
+    margin:             0 auto;
+    min-height:         50px;
+  }
 }
 .vertical_align{
   height:               100%;
