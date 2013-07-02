@@ -90,3 +90,8 @@ body{
   margin-left:          -2px;
   @include inline-block;
 }
+.load{
+  width:                200px;
+  height:               200px;
+  margin:               0 auto;
+}

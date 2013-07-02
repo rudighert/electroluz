@@ -1,0 +1,6 @@
+$('.content_wrapper').html("<%= j @template.html_safe %>");
+$('.content_wrapper').fadeIn(300);
+
+if("<%= @name_render%>"=="init"){
+  startScrollInit()
+}
