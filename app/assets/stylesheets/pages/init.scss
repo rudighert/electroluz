@@ -66,3 +66,46 @@
     }
   }
 }
+#who{
+  .title{
+    padding:            5px 0;
+    text-decoration:    underline;
+  }
+  .ilustration{
+    margin-top:         -23px;
+    text-align:         right;
+    position:           relative;
+  }
+  .content_text{
+    position:           absolute;
+    top:                40px;
+    right:              15px;
+    width:              700px;
+    text-align:         left;
+    @include box-sizing(border-box);
+    .text_show{
+      background-color:   rgba(white,0.7);
+      line-height:        30px;
+      padding:            20px 20px 20px 0;
+      @include border-radius(5px);
+    }
+  }
+}
+
+.menu_vertical{
+  position:               absolute;
+  top:                    38px;
+  left:                   20px;
+  width:                  150px;
+  .menu_who{
+    margin:               0;
+    padding:              0;
+  }
+  .item_who{
+    padding:                5px 0;
+    border-bottom:             1px solid gray;
+    text-align:             left;
+    list-style:             none;
+  }
+}
+  
