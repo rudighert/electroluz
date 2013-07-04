@@ -1,0 +1,6 @@
+$(".<%=@selector%>").html("<%= j @template.html_safe %>");
+$(".<%=@selector%>").fadeIn(300);
+
+if("<%= @name_render%>"=="who"){
+  setWhoSelect("<%=@subrender%>")
+}
