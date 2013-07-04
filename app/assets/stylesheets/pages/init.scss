@@ -106,6 +106,49 @@
     border-bottom:             1px solid gray;
     text-align:             left;
     list-style:             none;
+    cursor:                 pointer;
+    @include transition(padding, 0.2s);
+    &:hover, &.active{
+      padding-left:         10px;
+      @include transition(padding, 0.2s);
+    }
+  }
+}
+
+#services{
+  padding:                0 20px;
+  .title{
+    padding:            5px 0;
+    text-decoration:    underline;
+  }
+  .subtitle{
+    text-decoration:    underline;
+    font-weight:        normal;
+    font-size:          20px;
+    padding:            15px 0;
+  }
+  .block{
+    line-height:        25px;
+    padding:            15px;
+    @include inline-block;
+    @include box-sizing(border-box);
+    min-height: 350px;
+    &.electric{
+      width:          565px;
+    }
+    &.images{
+      width:          350px;
+      height:         350px;
+      padding:        0;
+    }
+  }
+  .image_gallery{
+    margin:             0;
+    padding:            0;
+    .content_image{
+      @include inline-block;
+      img{@include border-radius(5px)}
+    }
   }
 }
   

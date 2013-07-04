@@ -3,19 +3,13 @@
     =image_tag 'who.png'
     .menu_vertical
       %ul.menu_who
-        %li.item_who
+        %li.item_who.active{data:{name_render: "who", subrender: "history", selector: "content_text"}}
           Historias
-        %li.item_who
-          Nuestros Principios
-        %li.item_who
-          Nuestros Valores
-        %li.item_who
-          Organización
-        %li.item_who
-          Registros
-
+        %li.item_who{data:{name_render: "who", subrender: "mision", selector: "content_text"}}
+          Misión
+        %li.item_who{data:{name_render: "who", subrender: "vision", selector: "content_text"}}
+          Visión
+  
     .content_text
-      %h2.title
-        Historia
-      .text_show
-        Exoluz Limitada, nace en el año 2012 como solución de ofertas y servicios integrales para la empresa, reuniendo dos segmentos profesionales específicos con basta experiencia contrastada en las áreas especializadas eléctrica y construcciónn. El objetivo de Exoluz Limitada no es otro que apoyar permanentemente a nuestros clientes en el desarrollo de sus ideas y necesidades, conseguir con el esfuerzo de nuestro equipo y la confianza de nuestros clientes, ofertar toda una gama de servicios que nos permita mediante una continua filosofía de innovación aportar al desarrollo sus proyectos y de nuestro país.
+      -@subrender = "history"
+      =render 'renders/who'

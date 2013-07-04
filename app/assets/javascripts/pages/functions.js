@@ -4,6 +4,8 @@ $(document).ready(function(){
     var name_render = $(this).data('name_render')
     setRender(name_render)
   })
+
+
 })
 
 function setRender(name_render){
@@ -12,7 +14,18 @@ function setRender(name_render){
     $('.content_wrapper').html('')
     $('.item a').removeClass('active')
     $('.item[data-name_render="'+name_render+'"] a').addClass('active')
-    $.get(render,{name_render: name_render}, function(data){
+    $.get(render_path,{name_render: name_render}, function(data){
+    });
+  }) 
+}
+
+function setSubRender(name_render,selector, subrender){
+  var name_render = name_render
+  var subrender = subrender
+  var selector = selector
+  $('.'+selector).fadeOut(500,function(){
+    $('.'+selector).html('')
+    $.get(subrender_path,{name_render: name_render, subrender: subrender, selector: selector}, function(data){
     });
   }) 
 }
@@ -24,5 +37,28 @@ function startScrollInit(){
       duration: 1000
     }
   });
+}
+
+function servicesGalleries(){
+  $('.image_gallery').carouFredSel({
+    items:{visible:1},
+    scroll:{
+      duration: 800
+    }
+  });
+}
+
+function actionForWho(){
+  $('.menu_who').on('click','.item_who',function(){
+    var name_render = $(this).data('name_render')
+    var selector    = $(this).data('selector')
+    var subrender   = $(this).data('subrender')
+    setSubRender(name_render, selector,subrender)
+  })
+}
+
+function setWhoSelect(selector){
+  $('.menu_vertical .item_who').removeClass('active')
+  $('.menu_vertical .item_who[data-subrender='+selector+']').addClass('active')
 }
 
