@@ -1,9 +1,6 @@
 #services
-  %h1.title
-    Servicios
-
   .block.electric
-    %h2.subtitle
+    %h1.title
       Servicios Eléctricos Integrales.
     .text
       Tenemos la capacidad de apoyar a nuestros desde la asesoría técnica, desarrollo de proyectos eléctricos, ejecución y puesta en marcha.
@@ -44,7 +41,29 @@
 
   .block.images
     %ul.image_gallery
-      %li.content_image
-        =image_tag 'photos/im_1.jpg', width:"350px", height: "350px", alt:"imagen"
-      %li.content_image
-        =image_tag 'photos/im_2.jpg', width:"350px", height: "350px", alt:"imagen"
+      -(1..17).each do |i|
+        %li.content_image
+          =image_tag "photos/im_#{i}.jpg", width:"350px", height: "350px", alt:"imagen"
+     
+  .block.electric
+    %h1.title
+      Construcción y Obras Civiles
+    .text
+      Basados en la O.G.U.C, las normas del buen construir nuestro equipo esta calificado para desarrollar proyecto relacionados con las siguientes especialidades.
+      %ul.list_quality
+        %li
+          Obras Viales
+        %li
+          Estructuras en Hormigón
+        %li
+          Estructuras Metálicas
+        %li
+          Estructuras Livianas – Habilitaciones de locales en Retail.
+        %li
+          Movimientos de Tierra
+        %li
+          Construcción de edificios o partes de ellos 
+
+
+
+  

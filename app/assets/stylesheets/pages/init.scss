@@ -142,6 +142,9 @@
       padding:        0;
     }
   }
+  .text{
+    padding:          15px;
+  }
   .image_gallery{
     margin:             0;
     padding:            0;
@@ -149,6 +152,18 @@
       @include inline-block;
       img{@include border-radius(5px)}
     }
+  }
+}
+
+#business{
+  background: asset-url('area_business.jpg',image) center center;
+  background-size: cover;
+  padding: 40px;
+  margin-top: -23px;
+  .wrapper_business{
+    background-color:     rgba(white,0.85);
+    padding:              15px;
+    @include border-radius(5px);
   }
 }
   
