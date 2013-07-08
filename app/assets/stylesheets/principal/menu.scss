@@ -20,7 +20,7 @@
     font-size:          13px;
     font-weight:        light;
     color:              black;
-    min-width:          115px;
+    min-width:          110px;
     text-align:         center;
     border-right:        1px solid gray;
     @include box-sizing(border-box);
@@ -28,7 +28,7 @@
 
     &:last-child{
       border:           none;
-
+      min-width:        230px;
     }
 
     a{

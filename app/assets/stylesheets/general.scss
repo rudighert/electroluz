@@ -1,6 +1,6 @@
 @import 'compass';
 @import "compass/layout/sticky-footer";
-@include sticky-footer(54px, ".content_page", "#wrapper", "#root");
+@include sticky-footer(5px, ".content_page", "#wrapper", "#root");
 
 a{text-decoration:    none}
 h1,h2,h3,h4,h5,h6{
@@ -14,6 +14,7 @@ body{
   background-color:   rgb(202, 202, 202);
   margin:             0;
   padding:            0;
+  font-size:          14px;
   font-family:        "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -83,6 +84,28 @@ body{
     width:              960px;
     margin:             0 auto;
     min-height:         50px;
+    text-align:         center;
+  }
+  .block{
+    min-width:          250px;
+    text-align:         left;
+    @include inline-block(top);
+  }
+  ul{
+    padding:            0;
+    margin:             0;
+    li{
+      list-style:       none;
+      padding-left:     15px;
+    }
+  }
+  .title_f{
+    text-decoration:    underline;
+    font-size:          16px;
+    padding-bottom:     10px;
+  }
+  .show_team{
+    cursor:             pointer;
   }
 }
 .vertical_align{
@@ -94,4 +117,31 @@ body{
   width:                200px;
   height:               200px;
   margin:               0 auto;
+}
+#team_exoluz{
+  display:              none;
+  .content_team{
+    width:              650px;
+    background-color:   white;
+    padding:              20px;
+  }
+  .image_person,.content_description{
+    @include inline-block(top);
+  }
+  .block_person{
+    margin-bottom:     10px;
+  }
+  .content_description{
+    width:            300px;
+    padding:          10px;
+    @include box-sizing(border-box);
+    .name{
+      font-weight:      bold;
+      padding:          5px 0;
+    }
+    .work{
+      text-decoration: underline;
+      padding:          5px 0;
+    }
+  }
 }

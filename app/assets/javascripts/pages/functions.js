@@ -4,6 +4,9 @@ $(document).ready(function(){
     var name_render = $(this).data('name_render')
     setRender(name_render)
   })
+  $('.block').live('click','.show_team',function(){
+    showTeam()
+  })
 
 
 })
@@ -62,3 +65,10 @@ function setWhoSelect(selector){
   $('.menu_vertical .item_who[data-subrender='+selector+']').addClass('active')
 }
 
+function showTeam(){
+  $("#team_exoluz").modal({
+    opacity:70, 
+    overlayCss: {backgroundColor:"black"},
+    overlayClose: true
+  });
+}

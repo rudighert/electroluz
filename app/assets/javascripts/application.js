@@ -15,4 +15,4 @@
 //= require_tree .
 //= require jquery.ui.all
 //= require jquery.carouFredSel
-
+//= require jquery.simplemodal.1.4.4.min

@@ -5,6 +5,11 @@
   height:             300px;
   overflow-y:         hidden; 
 }
+.title{
+  padding:            5px 0;
+  font-size:          20px;
+  text-decoration:    underline;
+}
 .area_banner{
   margin:             0;
   padding:            0;
@@ -25,7 +30,6 @@
     @include border-radius(5px);
     .title{
       font-weight:      bold;
-      font-size:        25px;
       margin-bottom:    10px;
     }
     .area_text{
@@ -52,9 +56,6 @@
       border-right:        1px solid black;
     }
     .title{
-      font-size:        22px;
-      font-weight:      bold;
-      text-decoration:  underline;
       text-align:       center;
     }
     .ilutration{
@@ -68,8 +69,6 @@
 }
 #who{
   .title{
-    padding:            5px 0;
-    text-decoration:    underline;
   }
   .ilustration{
     margin-top:         -23px;
@@ -117,10 +116,6 @@
 
 #services{
   padding:                0 20px;
-  .title{
-    padding:            5px 0;
-    text-decoration:    underline;
-  }
   .subtitle{
     text-decoration:    underline;
     font-weight:        normal;
@@ -144,6 +139,7 @@
   }
   .text{
     padding:          15px;
+    font-size:        14px;
   }
   .image_gallery{
     margin:             0;
@@ -166,4 +162,16 @@
     @include border-radius(5px);
   }
 }
-  
+#security{
+  .image_content, .explain_text{
+    @include inline-block(top);
+  }
+  .image_content{
+    width:            250px;
+  }
+  .explain_text{
+    width:            680px;
+    padding:          15px;
+    @include box-sizing(border-box);
+  }
+}
