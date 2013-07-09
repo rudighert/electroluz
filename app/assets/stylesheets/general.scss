@@ -58,7 +58,7 @@ body{
     @include inline-block;
     &.left{
       width:          70%;
-      height:         65px;
+      height:         80px;
       background:   asset-url('gray.png',image);
     }
     &.right{
