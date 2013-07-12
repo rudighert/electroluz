@@ -1,6 +1,5 @@
 @import 'compass';
-@import "compass/layout/sticky-footer";
-@include sticky-footer(5px, ".content_page", "#wrapper", "#root");
+
 
 a{text-decoration:    none}
 h1,h2,h3,h4,h5,h6{
@@ -24,6 +23,7 @@ body{
   z-index:            1;
   left:               0;
   margin:             123px auto 0 auto;
+  min-height:         400px;
   
   .content_wrapper{
     width:              960px;
@@ -80,11 +80,13 @@ body{
   font-weight:          lighter;
   background:   asset-url('gray.png',image);
   margin-top:           25px;
+  text-align:           left;
   .conten_footer{
     width:              960px;
     margin:             0 auto;
-    min-height:         50px;
-    text-align:         center;
+    text-align:         left;
+    padding:            0 100px;
+    @inlcude box-sizing(border-box);
   }
   .block{
     min-width:          250px;
@@ -120,6 +122,11 @@ body{
 }
 #team_exoluz{
   display:              none;
+  font-size:            0;
+  .resumen{
+    font-size:          12px;
+    line-height:        18px;
+  }
   .content_team{
     width:              650px;
     background-color:   white;
@@ -128,8 +135,19 @@ body{
   .image_person,.content_description{
     @include inline-block(top);
   }
+  .to_left,.to_right{
+    width:            50%;
+    @include inline-block(top);
+    &.right{
+      text-align:     right;
+    }
+  }
   .block_person{
-    margin-bottom:     10px;
+    margin-bottom:      10px;
+    width:              300px;
+    font-size:          14px;
+    text-align:         left;
+    @include inline-block;
   }
   .content_description{
     width:            300px;

@@ -1,10 +1,10 @@
 $(document).ready(function(){
   startScrollInit()
-  $('.conten_menu').on('click','.item',function(){
+  $('.conten_menu').on('click','li.item',function(){
     var name_render = $(this).data('name_render')
     setRender(name_render)
   })
-  $('.block').live('click','.show_team',function(){
+  $('.menu').live('click','.show_team',function(){
     showTeam()
   })
 
