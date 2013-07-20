@@ -1,10 +1,12 @@
 # encoding: UTF-8
 class PrincipalController < ApplicationController
   def index
+    
   end
 
   def set_render
     @name_render = params[:name_render]
+    session[:partial_define] = @name_render
     respond_to do |format|
       format.js do
         @template = render_to_string(partial: "pages/#{@name_render}", handlers: [:haml])
@@ -17,7 +19,6 @@ class PrincipalController < ApplicationController
     @name_render = params[:name_render]
     @subrender = params[:subrender]
     @selector = params[:selector]
-    awesome_print params
     respond_to do |format|
       format.js do
         @template = render_to_string(partial: "renders/#{@name_render}", handlers: [:haml])

@@ -4,7 +4,7 @@ $(document).ready(function(){
     var name_render = $(this).data('name_render')
     setRender(name_render)
   })
-  $('.menu').live('click','.show_team',function(){
+  $('#view_info_team').live('click','.show_team',function(){
     showTeam()
   })
 

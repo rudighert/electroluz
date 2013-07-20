@@ -7,8 +7,8 @@
 }
 .title{
   padding:            5px 0;
-  font-size:          20px;
-  text-decoration:    underline;
+  font-size:          16px;
+
 }
 .area_banner{
   margin:             0;
@@ -124,7 +124,7 @@
     padding:            15px 0;
   }
   .block{
-    line-height:        25px;
+    line-height:        20px;
     padding:            15px;
     @include inline-block;
     @include box-sizing(border-box);
@@ -190,6 +190,23 @@
     &:hover{
       @include filter(grayscale(0));
       @include transition(all, 0.6s);
+    }
+  }
+}
+
+#projects{
+  .title{
+    font-weight:      bold;
+  }
+  padding:            20px 60px;
+  .list_project{
+    .item_project{
+      padding:         5px 0;
+    }
+  }
+  .gallery_image{
+    .images_show{
+      @include inline-block;
     }
   }
 }

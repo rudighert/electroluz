@@ -106,6 +106,13 @@ body{
     font-size:          16px;
     padding-bottom:     10px;
   }
+  .label{
+    width:            75px;
+    @include inline-block();
+  }
+  .show_info{
+    @include inline-block;
+  }
   .show_team{
     cursor:             pointer;
   }
@@ -128,15 +135,15 @@ body{
     line-height:        18px;
   }
   .content_team{
-    width:              650px;
+    width:              800px;
     background-color:   white;
     padding:              20px;
   }
   .image_person,.content_description{
     @include inline-block(top);
   }
-  .to_left,.to_right{
-    width:            50%;
+  .column{
+    width:            33%;
     @include inline-block(top);
     &.right{
       text-align:     right;
@@ -145,7 +152,7 @@ body{
   .block_person{
     margin-bottom:      10px;
     width:              300px;
-    font-size:          14px;
+    font-size:          12px;
     text-align:         left;
     @include inline-block;
   }
@@ -158,8 +165,12 @@ body{
       padding:          5px 0;
     }
     .work{
-      text-decoration: underline;
-      padding:          5px 0;
+      padding:          2px 0;
+    }
+    .email{
+      cursor:           pointer;
+      padding:          2px 0;
+      text-decoration:  underline;
     }
   }
 }
