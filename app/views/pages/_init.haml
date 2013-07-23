@@ -1,23 +1,9 @@
 .banner_inti
   %ul.area_banner
-    
-    %li.content_banner{style: "background: url(#{asset_path('pages/banner_0.png')})"}
+    -(0..7).each do |i|
+      %li.content_banner{style: "background: url(#{asset_path("pages/banner_#{i}.png")})"}
       
-        
-        
-
-    %li.content_banner{style: "background: url(#{asset_path('pages/banner_1.png')})"}
-
-    %li.content_banner{style: "background: url(#{asset_path('pages/banner_2.png')})"}
-
-    %li.content_banner{style: "background: url(#{asset_path('pages/banner_3.png')})"}
-      .vertical_align
-        -if false  
-          .fade_text
-          %h1.title
-            Calidad en el Servicio
-          .area_text
-            El objetivo de Exoluz Limitada no es otro que apoyar permanentemente a nuestros clientes en el desarrollo de sus ideas y necesidades, conseguir con el esfuerzo de nuestro equipo y la confianza de nuestros...
+    
 
 .aditionals
   .box_info
@@ -26,7 +12,20 @@
     .ilutration
       =image_tag 'company.png', width: "150px", height: "70px"
     .details
-      AD:60 specializes in developing and designing cutting-edge apps for iPhone, iPad and Android devices. Whether it's a magazine, book or website, we will help you reach the right audience with well-architected, strong interface design.
+      Exoluz se reconoce por ser una organización proactiva, cuya finalidad es dar soluciones generales a nuestros clientes, hoy contamos con 6 áreas de negocios:
+      %ul.list_area_bussines
+        %li
+          Construcción
+        %li
+          Electricidad
+        %li
+          Habilitaciones
+        %li
+          Remodelaciones
+        %li
+          Movimientos de tierra
+        %li
+          Venta de grupos electrógenos
   .box_info.center
     .title
       Seguridad Laboral
