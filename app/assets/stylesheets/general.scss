@@ -107,11 +107,15 @@ body{
     padding-bottom:     10px;
   }
   .label{
-    width:            75px;
+    width:            130px;
+    
     @include inline-block();
   }
   .show_info{
     @include inline-block;
+    &:before{
+      content: ":";
+    }
   }
   .show_team{
     cursor:             pointer;
