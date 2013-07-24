@@ -69,6 +69,7 @@
     .details{
       font-size:        12px;
       font-weight:      lighter;
+      text-align:       justify;
     }
   }
 }
@@ -129,10 +130,8 @@
   }
   .block{
     line-height:        20px;
-    padding:            15px;
     @include inline-block;
     @include box-sizing(border-box);
-    min-height: 350px;
     &.electric{
       width:          565px;
     }
