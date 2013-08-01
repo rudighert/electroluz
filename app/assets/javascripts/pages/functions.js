@@ -66,9 +66,11 @@ function setWhoSelect(selector){
 }
 
 function showTeam(){
+  mixpanel.track("Pestaña Visitada",{"nombre pestaña" : "showTeam"});
   $("#team_exoluz").modal({
     opacity:70, 
     overlayCss: {backgroundColor:"black"},
     overlayClose: true
   });
+
 }
