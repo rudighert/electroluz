@@ -39,3 +39,5 @@ gem 'compass-rails'
 
 gem "awesome_print"
 
+
+gem 'mixpanel-ruby'

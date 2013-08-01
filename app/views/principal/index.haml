@@ -1,2 +1,4 @@
 .selected_item
-  =render "pages/init"
+	=render "pages/init"
+	:javascript
+		mixpanel.track("Entrada a la página");

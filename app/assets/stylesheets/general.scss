@@ -92,6 +92,11 @@ body{
     min-width:          250px;
     text-align:         left;
     @include inline-block(top);
+    &.mixpanel{
+      width:          200px;
+      vertical-align: bottom;
+      text-align:     right;
+    }
   }
   ul{
     padding:            0;

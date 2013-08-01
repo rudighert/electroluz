@@ -13,3 +13,5 @@ if("<%= @name_render%>"=="services"){
   servicesGalleries()
 }
 
+
+mixpanel.track("Pagina Visitada",{"pestaña","<%= @name_render%>"});
