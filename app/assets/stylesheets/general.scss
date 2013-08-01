@@ -52,6 +52,15 @@ body{
   left:               0;
   z-index:            3;
   min-width:          960px;
+
+  .block.analityc{
+    text-align: left;
+    min-width:   670px;
+    @include inline-block;
+    img{
+      margin-top:   21px;
+    }
+  }
  
   @include box-shadow(1px 1px 3px gray);
   .header_side{
