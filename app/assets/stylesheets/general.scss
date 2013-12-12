@@ -24,7 +24,7 @@ body{
   left:               0;
   margin:             123px auto 0 auto;
   min-height:         400px;
-  
+
   .content_wrapper{
     width:              960px;
     min-height:         400px;
@@ -53,15 +53,25 @@ body{
   z-index:            3;
   min-width:          960px;
 
+  .tegic, .analityc{
+    @include inline-block;
+  }
+  .tegic{
+    img{
+      height: 75px;
+      margin: 3px 10px 0 10px;
+    }
+
+  }
   .block.analityc{
     text-align: left;
-    min-width:   670px;
+    width: 600px;
     @include inline-block;
     img{
       margin-top:   21px;
     }
   }
- 
+
   @include box-shadow(1px 1px 3px gray);
   .header_side{
     @include inline-block;
@@ -122,7 +132,7 @@ body{
   }
   .label{
     width:            130px;
-    
+
     @include inline-block();
   }
   .show_info{
